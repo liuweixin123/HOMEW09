@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var a = Math.random();//双开区间
+//..........
+    var youBian = 100;
+    console.log(parseInt(Math.random()*(youBian+1)));//左开右闭区间
+
+//  获取startVal —— endVal 之间的随机数
+    var startVal = 10;
+    var endVal   = 20;
+    console.log(parseInt(Math.random() * (endVal-startVal + 1)+ startVal)) ;//双闭区间
+//.......
+    var i = 10;
+    var j   = 20;
+    console.log(parseInt(Math.random() * (j-i + 1))+ i);//左闭右开区间
+    </script>
+</body>
+</html>
