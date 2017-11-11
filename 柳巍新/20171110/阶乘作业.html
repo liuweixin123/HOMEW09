@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isJianchen(num){
+            var sum = 1;
+            for(var i = 1;i<=num;i++){
+                sum *= i;
+            }
+            return sum;
+        }
+        for(var i= 100; i <=999;i++){
+            if(isJianchen(parseInt(i/100))+isJianchen(parseInt(i % 100/10))+isJianchen(parseInt(i % 100 % 10))===i){
+                console.log(i);
+            }
+        }
+    </script>
+</body>
+</html>
