@@ -8,18 +8,13 @@
 </head>
 <body>
     <script>
-        
-        function rev(num){
-            var a = 0 ;
-            while(num !== 0){
-                a = a * 10 + num % 10;
-                num = parseInt(num / 10);
-            }
-            return a;
+        var a = prompt("输入昵称");
+        var reg = /^[\w\u4e00-\u9fa5]{6,8}$/;
+        if(reg.test(a)){
+            alert("昵称正常");
+        }else{
+            alert("昵称错误");
         }
-        console.log(rev(prompt("请输入一个整数")));
-
-        
     </script>
 </body>
 </html>

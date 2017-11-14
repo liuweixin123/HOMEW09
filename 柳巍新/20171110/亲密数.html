@@ -10,20 +10,24 @@
     <script>
         function QingMinum (i){
             var n = 0;
-            for (j=1;j<i;j++){
+            for (j = 1;j < i;j++){
                 if (i %j ===0){
-                    n +=j;
+                    n += j;
                 }
             }
-            return(n)
+            return n ;
         }
         for(var m =1;m<=3000;m++){
-            for (var k = 1 ;k<=m;k++){
-                if(QingMinum(m)==k && QingMinum(k)==m && m!==k){
-                    console.log(m,k);
-                }
+            // for (var k = 1 ;k<=m;k++){
+            //     if(QingMinum(m)==k && QingMinum(k)==m && m!==k){
+            //         {console.log(m,k);}
+            var k = QingMinum(m);
+            if(m ===QingMinum(k) && m < k){
+                console.log(m,k);
             }
-        }
+                }
+            
+        
     </script>
 </body>
 </html>

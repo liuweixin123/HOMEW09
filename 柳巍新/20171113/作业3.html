@@ -8,18 +8,14 @@
 </head>
 <body>
     <script>
-        
-        function rev(num){
-            var a = 0 ;
-            while(num !== 0){
-                a = a * 10 + num % 10;
-                num = parseInt(num / 10);
-            }
-            return a;
+        function rev(n){
+            var a = n;
+            var b= a .split("");
+            var c= b .reverse();
+            console.log(a);
+            return c ;
         }
-        console.log(rev(prompt("请输入一个整数")));
-
-        
+       alert(rev(prompt("请输入一个单词") ));
     </script>
 </body>
 </html>

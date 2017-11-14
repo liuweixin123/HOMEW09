@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function rightchange (char,n){
+                
+                for(var i = 1 ; i <=n; i++){
+                var str = "";
+                str += char.charAt(char.length-1);
+                str += char.substr(0,char.length-1);
+                char = str  
+           } console.log(str);
+        }
+        rightchange ("abcdefg",2);
+    </script>
+</body>
+</html>

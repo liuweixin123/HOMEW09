@@ -8,18 +8,17 @@
 </head>
 <body>
     <script>
-        
-        function rev(num){
-            var a = 0 ;
-            while(num !== 0){
-                a = a * 10 + num % 10;
-                num = parseInt(num / 10);
+        function repeat (num){
+            var a  =[]
+            for (var i = 1 ;i<=6;i++){
+                a.unshift(num);
+                
             }
             return a;
         }
-        console.log(rev(prompt("请输入一个整数")));
-
         
-    </script>
+        console.log(repeat("char"));
+
+     </script>
 </body>
 </html>
