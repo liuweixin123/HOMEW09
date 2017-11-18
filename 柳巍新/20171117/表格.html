@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #tb {
+                border-collapse:collapse;
+                }
+        th,td{border: 1px solid #ccc;
+                width: 400px;height: 30px;
+                float: left;}
+            button{width:100px;height: 30px;float: right;}
+        
+    </style>
+</head>
+<body>
+        <table  id="tb">
+             <tr ><th></th><th></th></tr> 
+             <tr ><th></th><th></th></tr>
+             <tr ><th></th><th></th></tr>
+             <tr ><th></th><th></th></tr>           
+             <tr ><th></th><th></th></tr>
+             <tr ><th></th><th></th></tr>
+             <tr ><th></th><th></th></tr>
+             <tr ><th></th><th></th></tr>
+             <tr ><th></th><th></th></tr>
+             <tr ><th></th><th></th></tr>
+             <tr ><th></th><th></th></tr>
+
+        </table>
+    
+    <button></button>
+    <script>
+            var but = document.querySelector("button")
+            var trs = document.querySelectorAll("tr");
+            for (var i=0 ;i<=trs.length;i+=2){
+                trs[i].style.backgroundColor = "red";
+           }
+           but.onclick = function () {
+               for(var i = 0; i<trs.length; i++){
+               trs[i].style.backgroundColor = "";}
+               for(var j= 1;j<trs.length;j+=2){
+                trs[j].style.backgroundColor = "red";
+               }
+           }
+
+            
+    </script>
+</body>
+</html>
