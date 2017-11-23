@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    
+   
+    body{margin: 0;}
+    .rolls{
+        width: 800px;
+        height: 130px;
+        border: 10px solid #ccc;
+        margin: 100px auto;
+        position: relative;
+        overflow: hidden;/* 溢出隐藏 */
+    }
+    .rolls-unit{
+        width: 5000px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .rolls-unit ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;/* 清除浮动 */
+    }
+    .rolls-unit ul li{
+        float: left;
+        margin-right: 10px;
+    }
+</style>
+</head>
+<body>
+    <div id="rolling" class="rolls">
+        <div id="rolling-unit" class="rolls-unit">
+            <ul>
+                <li><a href="#"><img src="./shuzi/0.png" alt="0"></a></li>
+                <li><a href="#"><img src="./shuzi/1.png" alt="1"></a></li>
+                <li><a href="#"><img src="./shuzi/2.png" alt="2"></a></li>
+                <li><a href="#"><img src="./shuzi/3.png" alt="3"></a></li>
+                <li><a href="#"><img src="./shuzi/4.png" alt="4"></a></li>
+                <li><a href="#"><img src="./shuzi/5.png" alt="5"></a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="animate2.1.js"></script>
+    <script>
+        var oUl = document.querySelector("ul");
+        var oLis = document.querySelectorAll("ul li");
+        var liLength = oLis.length;
+        oUl.innerHTML += oUl.innerHTML;
+
+        var indx = 0;
+        function roll(){
+            indx++;
+            animate(oUl,{'left':-210 * indx},500,'Linear',function(){
+                if(indx > liLength -1){
+                    indx = 0;
+                    this.style.left = 0;
+                }
+            });
+        }
+    var timer = setInterval(roll,1000);
+    oUl.onmouseover = function (){
+        clearInterval(timer);
+    }
+    oUl.onmouseout = function(){
+        timer = setInterval(roll,1000);
+    }
+    </script>
+</body>
+</html>

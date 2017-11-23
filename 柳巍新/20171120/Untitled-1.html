@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 650px;height: 304px;
+           position: relative;
+           top: 50px;
+           left:300px;
+            }
+        p{position:absolute;
+            top: 150px;left:391px;}
+        button{ padding: 5px 10px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            background-color: #ff6600;
+            color: #ccc;}
+    </style>
+</head>
+<body>
+    <div>
+        <img src="1.jpg" alt="">
+        <p>点<br>名<br>咯</p>
+    </div>
+    <button>开始</button>
+    <script>
+        var oDiv = document.querySelector('p');
+        var oBtn = document.querySelector('button');
+        var names = ['赵<br>达','张<br>磊','张<br>丽<br>竹','程<br>川','柏<br>小<br>田',
+            '刘<br>前','柳<br>巍<br>新','彭<br>鑫<br>垚','郑<br>轲','黄<br>彬','黄<br>瑶',
+            '李<br>明','李<br>洲','廖<br>立','刘<br>晶','罗<br>浩','潘<br>缘<br>根',
+            '谭<br>彪','王<br>晓<br>欢','肖<br>映<br>玲','朱<br>想','卓<br>磊','邹<br>虹','陈<br>翀'];
+        var oIndex;
+        var speedTime = 10;
+        var totalTime = 1000;
+        oBtn.onclick = function(){
+            var times = 0;
+            var timer = setInterval(function () {
+                times++;
+                if(times >= totalTime/speedTime){
+                    clearInterval(timer);
+                }
+                oIndex = parseInt(Math.random() * (names.length-1-0+1)) + 0;
+                oDiv.innerHTML = names[oIndex];
+            },speedTime);
+        };
+    </script>
+</body>
+</html>
