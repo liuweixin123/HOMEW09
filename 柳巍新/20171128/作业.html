@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+ body{margin: 0}
+ #carousel{
+     width: 380px;
+     height: 278px;
+     margin: 50px auto;
+     border: 2px solid #000000;
+     position: relative;
+    
+ }
+ #carousel section{
+     width: 380px;
+     height: 230px;
+     position: absolute;
+     top: 0;
+     left: 0; 
+     overflow: hidden;
+ }
+ #carousel section ul{
+     width:380px;
+     height: 2000px;
+     margin: 0;
+     padding: 0;
+     list-style: none;
+     position: relative;
+ }
+ #carousel section ul li{
+     width:380px;
+     height: 230px;
+     float: left;
+ }
+ #carousel section ul li img{
+     width:100%;
+     height: 100%;
+ }
+ footer{
+    width: 76px;
+    height: 40px;
+    position: absolute;
+    top: 232px;
+    bottom: 15px;
+}
+footer ol{
+    width: 380px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+}
+footer ol li{
+    width: 70px;
+    height: 40px;
+    float: left;
+    cursor: pointer;
+   border: 3px solid #eeeeee;
+   
+}
+footer ol li img{
+    width:70px;
+    height: 40px;
+}
+footer ol .cur{
+    border-color: red;
+}
+    </style>
+</head>
+<body>
+    <div id="carousel">
+        <section>
+            <ul>
+                <li><img src="homework2/0.jpg" alt=""></li>
+                <li><img src="homework2/1.jpg" alt=""></li>
+                <li><img src="homework2/2.jpg" alt=""></li>
+                <li> <img src="homework2/3.jpg" alt=""></li>
+                <li> <img src="homework2/4.jpg" alt=""></li>
+            </ul>
+        </section>
+        <footer>
+            <ol>
+                <li class="cur"><img src="homework2/0.jpg" alt=""></li>
+                <li><img src="homework2/1.jpg" alt=""></li>
+                <li><img src="homework2/2.jpg" alt=""></li>
+                <li><img src="homework2/3.jpg" alt=""></li>
+                <li><img src="homework2/4.jpg" alt=""></li>
+            </ol>
+        </footer>
+    </div>
+    <script src="zuoye.js"></script>
+    <script src="animate2.1.js"></script>
+</body>
+</html>
